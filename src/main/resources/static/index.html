@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Employee Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <h2 class="logo">EMS</h2>
+        <nav>
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="employees.html">Employees</a>
+            <a href="employee-form.html">Add Employee</a>
+            <a href="departments.html">Departments</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <div class="page-header">
+            <h1>Dashboard</h1>
+            <a href="employee-form.html" class="btn btn-primary">+ Add Employee</a>
+        </div>
+
+        <div id="message" class="message hidden"></div>
+
+        <section class="stats">
+            <div class="card stat-card">
+                <h3>Total Employees</h3>
+                <p id="totalEmployees">0</p>
+            </div>
+            <div class="card stat-card">
+                <h3>Total Departments</h3>
+                <p id="totalDepartments">0</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Recently Added Employees</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr><th>Name</th><th>Designation</th><th>Department</th><th>Joining Date</th></tr>
+                    </thead>
+                    <tbody id="recentBody">
+                    <tr><td colspan="4" class="empty">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees - Employee Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <h2 class="logo">EMS</h2>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="employees.html" class="active">Employees</a>
+            <a href="employee-form.html">Add Employee</a>
+            <a href="departments.html">Departments</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <div class="page-header">
+            <h1>Employees</h1>
+            <a href="employee-form.html" class="btn btn-primary">+ Add Employee</a>
+        </div>
+
+        <div id="message" class="message hidden"></div>
+
+        <section class="card">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by name...">
+                <button id="searchBtn" class="btn btn-primary">Search</button>
+                <button id="clearBtn" class="btn btn-secondary">Clear</button>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>ID</th><th>Name</th><th>Email</th><th>Department</th>
+                        <th>Designation</th><th>Salary</th><th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody id="employeeBody">
+                    <tr><td colspan="7" class="empty">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</div>
+
+<!-- Delete confirmation popup -->
+<div id="deleteModal" class="modal hidden">
+    <div class="modal-box">
+        <h3>Delete Employee?</h3>
+        <p id="deleteText"></p>
+        <div class="modal-actions">
+            <button id="cancelDelete" class="btn btn-secondary">Cancel</button>
+            <button id="confirmDelete" class="btn btn-danger">Delete</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/employees.js"></script>
+</body>
+</html>

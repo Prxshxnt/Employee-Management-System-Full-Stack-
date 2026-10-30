@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details - Employee Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <h2 class="logo">EMS</h2>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="employees.html" class="active">Employees</a>
+            <a href="employee-form.html">Add Employee</a>
+            <a href="departments.html">Departments</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <div class="page-header">
+            <h1>Employee Details</h1>
+            <div>
+                <a id="editLink" href="employees.html" class="btn btn-primary">Edit</a>
+                <a href="employees.html" class="btn btn-secondary">Back</a>
+            </div>
+        </div>
+
+        <div id="message" class="message hidden"></div>
+
+        <section class="card">
+            <h2 id="fullName">Loading...</h2>
+            <div class="details-grid">
+                <div><div class="label">Employee ID</div><div class="value" id="empId">-</div></div>
+                <div><div class="label">Email</div><div class="value" id="empEmail">-</div></div>
+                <div><div class="label">Phone</div><div class="value" id="empPhone">-</div></div>
+                <div><div class="label">Department</div><div class="value" id="empDepartment">-</div></div>
+                <div><div class="label">Designation</div><div class="value" id="empDesignation">-</div></div>
+                <div><div class="label">Salary</div><div class="value" id="empSalary">-</div></div>
+                <div><div class="label">Joining Date</div><div class="value" id="empJoiningDate">-</div></div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/employee-details.js"></script>
+</body>
+</html>

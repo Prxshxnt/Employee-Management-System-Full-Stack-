@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form - Employee Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <h2 class="logo">EMS</h2>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="employees.html">Employees</a>
+            <a href="employee-form.html" class="active">Add Employee</a>
+            <a href="departments.html">Departments</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <div class="page-header">
+            <h1 id="formTitle">Add Employee</h1>
+        </div>
+
+        <div id="message" class="message hidden"></div>
+
+        <section class="card">
+            <form id="employeeForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" required maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" required maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" required maxlength="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" id="phoneNumber" maxlength="15">
+                    </div>
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <select id="department">
+                            <option value="">-- Select Department --</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="designation">Designation</label>
+                        <input type="text" id="designation" maxlength="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="salary">Salary *</label>
+                        <input type="number" id="salary" required min="1" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label for="joiningDate">Joining Date *</label>
+                        <input type="date" id="joiningDate" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="submitBtn" class="btn btn-primary">Save Employee</button>
+                    <a href="employees.html" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </section>
+    </main>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/employee-form.js"></script>
+</body>
+</html>
